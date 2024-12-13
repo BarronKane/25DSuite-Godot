@@ -29,8 +29,9 @@ goto :EOF
 
 :ISPOWERSHELL 
 
-echo POWERSHELL DETECTED,
-echo you must run this in CMD
+echo POWERSHELL DETECTED
+echo LAUNCHING POWERSHELL
+powershell -File build.ps1
 
 goto :EOF
 
