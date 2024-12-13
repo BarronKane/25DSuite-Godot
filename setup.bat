@@ -15,6 +15,8 @@ goto :build
 git submodule update --init --recursive
 pushd godot-cpp
 scons platform=windows
+popd
+scons platform=windows
 
 goto :EOF 
 
