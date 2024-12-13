@@ -15,8 +15,10 @@ data_*/
 mono_crash.*.json
 
 # GDExtension binaries
+*.o
 *.obj
 *.exp
 *.dll
 *.lib
 *.dblite
+*.wasm

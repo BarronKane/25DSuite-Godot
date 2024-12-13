@@ -8,24 +8,31 @@ IF /I "%PARENT%" == "pwsh" goto :ISPOWERSHELL
 
 if ERRORLEVEL 1 goto error 
 
-goto :build 
+goto :build
 
-:build 
+:build
 
 git submodule update --init --recursive
+pushd emsdk
+call emsdk install latest
+call emsdk activate latest
+call emsdk_env.bat
+popd
 pushd godot-cpp
 scons platform=windows
+scons platform=web
 popd
 scons platform=windows
+scons platform=web
 
 goto :EOF 
 
 :ISPOWERSHELL 
 
 echo POWERSHELL DETECTED,
-echo you may need to run this in CMD
+echo you must run this in CMD
 
-goto :build 
+goto :EOF
 
 :error 
 echo UNKNOWN ERROR, do you have python and scons in your path?
