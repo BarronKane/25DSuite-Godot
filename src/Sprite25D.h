@@ -2,8 +2,10 @@
 
 #include <godot_cpp/classes/sprite3d.hpp>
 
-namespace godot {
-    class Sprite25D : public Sprite3D {
+namespace godot 
+{
+    class Sprite25D : public Sprite3D 
+    {
         GDCLASS(Sprite25D, Sprite3D)
 
 private:
