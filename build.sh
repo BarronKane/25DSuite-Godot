@@ -12,5 +12,7 @@ emsdk_env.sh
 popd
 pushd godot-cpp
 scons platform=linux
+scons platform=web
 popd
 scons platform=windows
+scons platform=web
