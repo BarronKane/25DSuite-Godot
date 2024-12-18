@@ -26,7 +26,8 @@ void uninitialize_25DSUITE_module(ModuleInitializationLevel p_level)
 	}
 }
 
-extern "C" {
+extern "C" 
+{
     // Initialization.
     GDExtensionBool GDE_EXPORT gdextension_init(GDExtensionInterfaceGetProcAddress p_get_proc_address, const GDExtensionClassLibraryPtr p_library, GDExtensionInitialization *r_initialization) 
     {

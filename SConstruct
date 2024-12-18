@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
-import sys
+from glob import glob
+from pathlib import Path
 
 env = SConscript("godot-cpp/SConstruct")
 
