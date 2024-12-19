@@ -1,3 +1,26 @@
-[gd_scene format=3 uid="uid://ds41n7ctu6bf5"]
+[gd_scene load_steps=3 format=3 uid="uid://ds41n7ctu6bf5"]
+
+[ext_resource type="Texture2D" uid="uid://dk7euqiwom3ba" path="res://icon.svg" id="1_ixt4n"]
+
+[sub_resource type="Curve3D" id="Curve3D_lixv4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.64476, -0.00519466, -0.051662, 0, 0, 0, 0, 0, 0, 3.35487, -0.0259736, -0.096971, 0, 0, 0, 0, 0, 0, 4.6749, -0.0675306, -0.117997, 0, 0, 0, 0, 0, 0, 6.04742, -0.0675306, -0.163477),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.76001, 0, 0)
+curve = SubResource("Curve3D_lixv4")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.0313944, 0.00315513, -0.999486, -2.32829e-10, 0.999976, 0.0031567, 0.999499, -9.91028e-05, 0.031394, 0, 0, 0)
+
+[node name="Sprite25D" type="Sprite25D" parent="Path3D/PathFollow3D"]
+transform = Transform3D(-0.147941, -0.00195061, -0.988995, -0.0242968, 0.999704, 0.00166274, 0.988698, 0.0242754, -0.147945, 0, 0, 0)
+texture = ExtResource("1_ixt4n")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999239, -0.00354942, 0.0388364, -0.00325854, 0.984768, 0.173843, -0.0388618, -0.173837, 0.984007, 0, 1.70269, 4.89592)
